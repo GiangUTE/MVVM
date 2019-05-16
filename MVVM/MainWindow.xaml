@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <views:StudentView x:Name="StudentViewControl" Loaded="StudentViewControl_Loaded"/>
+        <views:StudentView x:Name="StudentViewControl"/>
     </Grid>
 </Window>
