@@ -25,7 +25,7 @@ namespace MVVM.Model
                 {
                     firstName = value;
                     RaisePropertyChanged("FirstName");
-                    RaisePropertyChanged("LastName");
+                    RaisePropertyChanged("FullName");
                 }
             }
         }
@@ -40,8 +40,8 @@ namespace MVVM.Model
                 if (lastName!=value)
                 {
                     lastName = value;
-                    RaisePropertyChanged("FirstName");
                     RaisePropertyChanged("LastName");
+                    RaisePropertyChanged("FullName");
                 }
             }
         }

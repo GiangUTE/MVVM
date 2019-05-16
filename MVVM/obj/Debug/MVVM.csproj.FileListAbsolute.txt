@@ -1,7 +1,6 @@
 D:\_Study\MVVM\MVVM\bin\Debug\MVVM.exe.config
 D:\_Study\MVVM\MVVM\bin\Debug\MVVM.exe
 D:\_Study\MVVM\MVVM\bin\Debug\MVVM.pdb
-D:\_Study\MVVM\MVVM\obj\Debug\MVVM.csprojAssemblyReference.cache
 D:\_Study\MVVM\MVVM\obj\Debug\MainWindow.g.cs
 D:\_Study\MVVM\MVVM\obj\Debug\Views\StudentView.g.cs
 D:\_Study\MVVM\MVVM\obj\Debug\App.g.cs
