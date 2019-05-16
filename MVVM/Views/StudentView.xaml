@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVM.Views"
              xmlns:viewmodel="clr-namespace:MVVM.ViewModel"
+             xmlns:data="clr-namespace:MVVM.Model"
              xmlns:vml="clr-namespace:MVVM.VML"
              vml:ViewModelLocator.AutoHookedUpViewModel="True"
              mc:Ignorable="d" 
@@ -22,8 +23,16 @@
         </DataTemplate>
     </UserControl.Resources>
     <Grid>
-<ListBox
-    ItemsSource="{Binding Students}"
-    ItemTemplate="{StaticResource studentsTemplate}"/>
+        <StackPanel Orientation="Horizontal">
+            <ListBox
+            ItemsSource="{Binding Students}"
+            ItemTemplate = "{StaticResource studentsTemplate}"
+            SelectedItem="{Binding SelectedStudent}"/>
+            <Button Content="Delete"
+                Command="{Binding DeleteCommand}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"/>
+        </StackPanel>
     </Grid>
 </UserControl>
