@@ -9,23 +9,21 @@
              vml:ViewModelLocator.AutoHookedUpViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-
-    <Grid>
-        <StackPanel HorizontalAlignment="Left">
-            <ItemsControl ItemsSource="{Binding Path=Students}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Path=FirstName,Mode=TwoWay}"
-                                      Width="100" Margin="0 5 3 5"/>
-                            <TextBox Text="{Binding Path=LastName,Mode=TwoWay}"
+    <UserControl.Resources>
+        <DataTemplate x:Key="studentsTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBox Text="{Binding Path=FirstName,Mode=TwoWay}"
+                                      Width="100" Margin="3 5 3 5"/>
+                <TextBox Text="{Binding Path=LastName,Mode=TwoWay}"
                                      Width="100" Margin="0 5 3 5"/>
-                            <TextBlock Text="{Binding Path=FullName,Mode=OneWay}"
+                <TextBlock Text="{Binding Path=FullName,Mode=OneWay}"
                                      Margin="0 5 3 5"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+<ListBox
+    ItemsSource="{Binding Students}"
+    ItemTemplate="{StaticResource studentsTemplate}"/>
     </Grid>
 </UserControl>
